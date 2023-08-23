@@ -1,0 +1,38 @@
+nav {
+  background-color: white;
+  padding: 16px 12%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu {
+  cursor: pointer;
+}
+
+.navbar-items {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 20px 0;
+  background-color: white;
+  border-radius: 30px;
+  width: 90vw;
+  gap: 24px;
+
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navbar-item {
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.hidden {
+  visibility: hidden;
+}
