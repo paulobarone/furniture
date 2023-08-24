@@ -1,0 +1,31 @@
+.about {
+  padding: 8% 12%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.about-textgroup {
+  align-items: center;
+}
+
+.about-textgroup p {
+  text-align: center;
+}
+
+.about-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.about-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.about-item span {
+  font-weight: 500;
+}

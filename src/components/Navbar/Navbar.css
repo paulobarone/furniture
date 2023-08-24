@@ -33,6 +33,16 @@ nav {
   cursor: pointer;
 }
 
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.shopping-bag {
+  cursor: pointer;
+}
+
 .hidden {
   visibility: hidden;
 }

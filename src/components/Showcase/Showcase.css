@@ -1,0 +1,9 @@
+.showcase {
+  padding: 8% 12%;
+}
+
+.textgroup {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
