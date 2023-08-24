@@ -15,15 +15,17 @@ export default function Navbar(props) {
   return (
     <nav>
       <LogoDevIcon />
+      <ul className={`navbar-items ${!menuOpen && 'hidden'}`}>
+        {props.navbarItems.map((item, index) => {
+          return <li className='navbar-item' onClick={() => setMenuOpen(false)} key={index}>{item}</li>
+        })}
+      </ul>
       <div className='nav-right'>
         <ShoppingBagOutlinedIcon className='shopping-bag' />
-        { menuOpen ? <MenuOpenIcon sx={{fontSize: 32}} onClick={handleMenu} className='menu' /> : <MenuIcon sx={{fontSize: 32}} onClick={handleMenu} className='menu' /> }
+        <div className="icon-container">
+          { menuOpen ? <MenuOpenIcon sx={{fontSize: 32}} onClick={handleMenu} className='menu' /> : <MenuIcon sx={{fontSize: 32}} onClick={handleMenu} className='menu' /> }
+        </div>
       </div>
-        <ul className={`navbar-items ${!menuOpen && 'hidden'}`}>
-          {props.navbarItems.map((item, index) => {
-            return <li className='navbar-item' onClick={() => setMenuOpen(false)} key={index}>{item}</li>
-          })}
-        </ul>
     </nav>
   )
 }

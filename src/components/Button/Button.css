@@ -1,0 +1,30 @@
+.button {
+  background-color: var(--green);
+  color: white;
+  width: 250px;
+  border-radius: 24px;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color, width, 0.2s, color 0.2s; /* Transições para cor e background-color */
+}
+
+.button .button-icon {
+  vertical-align: middle;
+  transition: transform 0.2s; /* Transição para o ícone */
+}
+
+.button:hover {
+  background-color: var(--bright-green);
+  width: 255px;
+}
+
+.button:hover .button-icon {
+  transform: translateX(5px); /* Move o ícone 5px para a direita ao passar o mouse */
+}
+
+.button:not(:hover) {
+  background-color: var(--green); /* Restaura o background-color quando não está em hover */
+  width: 250px;
+}
