@@ -1,8 +1,8 @@
 import './Navbar.css';
 import MenuIcon from '@mui/icons-material/Menu';
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
-import LogoDevIcon from '@mui/icons-material/LogoDev';
 import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
+import SpaIcon from '@mui/icons-material/Spa';
 import { useState } from 'react'
 
 export default function Navbar(props) {
@@ -14,7 +14,7 @@ export default function Navbar(props) {
 
   return (
     <nav>
-      <LogoDevIcon />
+      <h1><SpaIcon className='logo-img' /> <span>Eco</span>Nod</h1>
       <ul className={`navbar-items ${!menuOpen && 'hidden'}`}>
         {props.navbarItems.map((item, index) => {
           return <li className='navbar-item' onClick={() => setMenuOpen(false)} key={index}>{item}</li>

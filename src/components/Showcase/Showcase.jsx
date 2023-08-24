@@ -7,9 +7,12 @@ export default function Showcase() {
   return (
     <section className="showcase">
       <div className="textgroup">
-        <h1 className="title">Lorem ipsum dolor sit amet.</h1>
+        <h1 className="title"><span>Eco</span>Nod</h1>
+        <p className="subtitle">
+          "Criando o futuro com a harmonia da natureza!"
+        </p>
         <p className="description">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae consequatur fugit a laudantium ipsa dolores hic sunt minima atque iste, nesciunt ad maiores repudiandae? Perferendis dolores molestias impedit sapiente quae.
+        A EcoNod cria móveis sustentáveis e inovadores, representando nossa crença na harmonia entre humanos e natureza.
         </p>
         <Button arrow={true}>Entre em contato</Button>
       </div>

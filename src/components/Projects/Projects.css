@@ -1,5 +1,5 @@
 .projects {
-  padding: 8% 12%;
+  padding: 4em 8%;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -32,4 +32,10 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
+}
+
+@media screen and (min-width: 1280px) {
+  .projects {
+    padding: 4em 12%;
+  }
 }
