@@ -1,12 +1,45 @@
-.proposal {
-  padding: 4em 8%;
+#proposal {
+  padding: 2em 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 12px;
+  background-color: var(--bright-green);
+}
+
+#proposal .textgroup {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  width: 400px;
+}
+
+.proposal-img {
+  width: 30%;
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .proposal-img {
+    display: block;
+  }
+
+  #proposal {
+    justify-content: space-between;
+  }
+
+  #proposal .textgroup {
+    text-align: left;
+    align-items: start;
+    text-align: left;
+  }
 }
 
 @media screen and (min-width: 1280px) {
-  .proposal {
-    padding: 4em 12%;
+  #proposal {
+    padding: 2em 12%;
   }
 }

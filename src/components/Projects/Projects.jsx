@@ -23,7 +23,7 @@ export default function Projects() {
   ]
 
   return (
-    <section className="projects">
+    <section id="projects">
       <h2>Projetos</h2>
       <div className='projects-container'>
         <ul className='projects-list'>

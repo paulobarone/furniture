@@ -1,5 +1,5 @@
 import "./About.css";
-import SpaIcon from "@mui/icons-material/Spa";
+import ForestIcon from '@mui/icons-material/Forest';
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import InventoryIcon from "@mui/icons-material/Inventory";
 import EmojiObjectsIcon from "@mui/icons-material/EmojiObjects";
@@ -7,8 +7,8 @@ import EmojiObjectsIcon from "@mui/icons-material/EmojiObjects";
 export default function About() {
   const aboutInfos = [
     {
-      img: <SpaIcon />,
       name: "Sustentabilidade",
+      img: <ForestIcon />,
     },
     {
       name: "Economia",
@@ -25,7 +25,7 @@ export default function About() {
   ];
 
   return (
-    <section className="about">
+    <section id="about">
       <div className="textgroup about-textgroup">
         <h2>Sobre nós</h2>
         <p>

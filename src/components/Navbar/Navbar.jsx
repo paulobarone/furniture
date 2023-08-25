@@ -2,11 +2,29 @@ import './Navbar.css';
 import MenuIcon from '@mui/icons-material/Menu';
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
-import SpaIcon from '@mui/icons-material/Spa';
+import EcoNodIcon from '../../assets/econod-icon.png';
 import { useState } from 'react'
 
-export default function Navbar(props) {
+export default function Navbar() {
   const [ menuOpen, setMenuOpen ] = useState(false);
+  const navbarItems = [
+    {
+      name: 'Proposta',
+      href: '#proposal'
+    },
+    {
+      name: 'Sobre nós',
+      href: '#about'
+    },
+    {
+      name: 'Projetos',
+      href: '#projects'
+    },
+    {
+      name: 'Contato',
+      href: '#contact'
+    }
+  ];
 
   const handleMenu = ()  => {
     return setMenuOpen((prevState) => !prevState);
@@ -14,10 +32,10 @@ export default function Navbar(props) {
 
   return (
     <nav>
-      <h1><SpaIcon className='logo-img' /> <span>Eco</span>Nod</h1>
+      <h1><img className='logo-img' src={EcoNodIcon} alt='Logo da EcoNod' /> <span>Eco</span>Nod</h1>
       <ul className={`navbar-items ${!menuOpen && 'hidden'}`}>
-        {props.navbarItems.map((item, index) => {
-          return <li className='navbar-item' onClick={() => setMenuOpen(false)} key={index}>{item}</li>
+        {navbarItems.map((item, index) => {
+          return <a href={item.href} className='navbar-item' onClick={() => setMenuOpen(false)} key={index}>{item.name}</a>
         })}
       </ul>
       <div className='nav-right'>

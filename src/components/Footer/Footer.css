@@ -4,4 +4,6 @@ footer {
   align-items: center;
   text-align: center;
   padding: 12px 0;
+  border-top: 2px solid var(--green);
+  background-color: var(--beige);
 }

@@ -18,10 +18,9 @@ nav h1 span {
   margin-left: 8px;
 }
 
-nav h1:hover .logo-img {
-  transition: 0.3s ease;
-  color: var(--green);
-  transform: translateY(-3px);
+.logo-img {
+  width: 24px;
+  height: 24px;
 }
 
 .menu {
@@ -50,6 +49,7 @@ nav h1:hover .logo-img {
   cursor: pointer;
   color: var(--GrayishBlue);
   position: relative;
+  text-decoration: none;
 }
 
 .navbar-item::after {
