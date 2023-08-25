@@ -1,8 +1,30 @@
 import './Contact.css';
 import contactImg from '../../assets/contact-img.png';
 import Button from '../Button/Button';
+import ValidationForm from '../../utils/ValidationForm';
+import { useEffect, useRef, useState } from 'react';
 
 export default function Contact() {
+	const [errors, setErrors] = useState({ name: null, email: null });
+	const [name, setName] = useState('');
+	const [email, setEmail] = useState('');
+
+	const messageInput = useRef('');
+
+	const updatePropError = (propName, dataProp) => {
+    setErrors((prevData) => {
+      return { ...prevData, [propName]: dataProp };
+    });
+  }
+	
+	const handleSubmit = (event) => {
+		event.preventDefault();
+
+		setName('');
+		setEmail('');
+		messageInput.current.innerHTML = '';
+	}
+
 	return (
 		<section id='contact'>
 			<div className='contact-container'>
@@ -12,18 +34,20 @@ export default function Contact() {
 						<h3>Mande-nos uma mensagem!</h3>
 						<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque, suscipit.</p>
 					</div>
-					<form className='contact-form'>
+					<form onSubmit={(e) => handleSubmit(e)} className='contact-form'>
 						<div className='contact-input-container'>
 							<label className='contact-label'>Nome</label>
-							<input className='contact-input' type="text" placeholder="Insira seu nome" />
+							<input className={`contact-input ${errors.name && 'invalid'}`} required onChange={(event) => setName(event.target.value)} name='name' onBlur={(e) => updatePropError(e.target.name, ValidationForm(e.target))} value={name} type="text" placeholder="Insira seu nome" />
+							{ errors.name && <span className='error-message'>{errors.name}</span> }
 						</div>
 						<div className='contact-input-container'>
 							<label className='contact-label'>E-mail</label>
-							<input className='contact-input' type="mail" placeholder="Insira seu e-mail" />
+							<input className={`contact-input ${errors.email && 'invalid'}`} required onChange={(event) => setEmail(event.target.value)} name='email' onBlur={(e) => updatePropError(e.target.name, ValidationForm(e.target))} value={email} type="email" placeholder="Insira seu e-mail" />
+							{ errors.email && <span className='error-message'>{errors.email}</span> }
 						</div>
 						<div className='contact-input-container'>
 							<label className='contact-label'>Mensagem</label>
-							<span name="message" className={`span-textarea contact-input`} onChange={(e) => console.log(e)} role="textbox" contentEditable></span>
+							<span ref={messageInput} name="message" className={`span-textarea contact-input`} role="textbox" contentEditable></span>
 						</div>
 						<Button>Enviar</Button>
 					</form>

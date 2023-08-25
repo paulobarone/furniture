@@ -2,7 +2,7 @@ import './Navbar.css';
 import MenuIcon from '@mui/icons-material/Menu';
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
-import EcoNodIcon from '../../assets/econod-icon.png';
+import EcoModIcon from '../../assets/ecomod-icon.png';
 import { useState } from 'react'
 
 export default function Navbar() {
@@ -32,7 +32,7 @@ export default function Navbar() {
 
   return (
     <nav>
-      <h1><img className='logo-img' src={EcoNodIcon} alt='Logo da EcoNod' /> <span>Eco</span>Nod</h1>
+      <h1><img className='logo-img' src={EcoModIcon} alt='Logo da EcoNod' /> <span>Eco</span>Mod</h1>
       <ul className={`navbar-items ${!menuOpen && 'hidden'}`}>
         {navbarItems.map((item, index) => {
           return <a href={item.href} className='navbar-item' onClick={() => setMenuOpen(false)} key={index}>{item.name}</a>

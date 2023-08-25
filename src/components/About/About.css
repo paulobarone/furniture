@@ -35,7 +35,7 @@
 
 .about-item:hover {
   transition: 0.3s ease;
-  color: var(--dark-green);
+  color: var(--dark-green)
 }
 
 .about-item span {
