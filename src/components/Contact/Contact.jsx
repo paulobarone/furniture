@@ -2,7 +2,7 @@ import './Contact.css';
 import contactImg from '../../assets/contact-img.png';
 import Button from '../Button/Button';
 import ValidationForm from '../../utils/ValidationForm';
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 
 export default function Contact() {
 	const [errors, setErrors] = useState({ name: null, email: null });
