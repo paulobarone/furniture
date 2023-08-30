@@ -1,9 +1,15 @@
 footer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 12px 0;
   border-top: 2px solid var(--green);
   background-color: var(--beige);
+}
+
+.credits {
+  color: var(--green);
+  font-weight: 700;
 }

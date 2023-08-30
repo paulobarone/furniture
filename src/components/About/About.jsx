@@ -29,10 +29,7 @@ export default function About() {
       <div className="textgroup about-textgroup">
         <h2>Sobre nós</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
-          iusto laboriosam doloremque. Delectus, vitae in. Possimus odit
-          voluptate, nisi repellat architecto exercitationem dolore, repudiandae
-          accusamus a quos odio doloremque mollitia?
+        Como grupo, estamos empenhados em promover uma revolução na maneira como você vive e interage com o seu espaço. Ao combinar sustentabilidade, inovação e tecnologia, a nossa linha de móveis moduláveis oferece soluções que se adaptam ao seu estilo de vida dinâmico.
         </p>
       </div>
       <ul className="about-list">

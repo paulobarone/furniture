@@ -92,6 +92,13 @@
 	color: var(--red);
 }
 
+.alert {
+	position: fixed;
+	left: 50%;
+	transform: translateX(-50%);
+	animation: pulse 3s;
+}
+
 @media screen and (min-width: 1024px) {
 	.contact-img {
 		display: block;
@@ -104,5 +111,27 @@
 
 	.contact-container {
 		padding: 0;
+	}
+}
+
+@keyframes pulse {
+	0% {
+		top: -100px;
+		opacity: 0;
+	}
+
+	25% {
+		top: 30px;
+		opacity: 1;
+	}
+
+	75% {
+		top: 30px;
+		opacity: 1;
+	}
+
+	100% {
+		top: -100px;
+		opacity: 0;
 	}
 }

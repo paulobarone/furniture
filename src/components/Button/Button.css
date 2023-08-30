@@ -7,7 +7,7 @@
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
-  transition: background-color, width, 0.2s;
+  transition: background-color, transform, 0.2s;
 }
 
 .button .button-icon {
@@ -17,7 +17,7 @@
 
 .button:hover {
   background-color: var(--bright-green);
-  width: 255px;
+  transform: scale(1.1);
 }
 
 .button:hover .button-icon {
@@ -26,5 +26,5 @@
 
 .button:not(:hover) {
   background-color: var(--green);
-  width: 250px;
+  transform: scale(1);
 }

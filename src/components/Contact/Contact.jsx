@@ -3,13 +3,16 @@ import contactImg from '../../assets/contact-img.png';
 import Button from '../Button/Button';
 import ValidationForm from '../../utils/ValidationForm';
 import { useRef, useState } from 'react';
+import { Alert } from "@mui/material";
 
 export default function Contact() {
 	const [errors, setErrors] = useState({ name: null, email: null });
 	const [name, setName] = useState('');
 	const [email, setEmail] = useState('');
+	const [showAlert, setShowAlert] = useState(false);
 
-	const messageInput = useRef('');
+	const alert = useRef();
+	const messageInput = useRef();
 
 	const updatePropError = (propName, dataProp) => {
     setErrors((prevData) => {
@@ -23,6 +26,11 @@ export default function Contact() {
 		setName('');
 		setEmail('');
 		messageInput.current.innerHTML = '';
+
+		setShowAlert(true);
+    setTimeout(() => {
+      setShowAlert(false);
+    }, 3000);
 	}
 
 	return (
@@ -32,9 +40,10 @@ export default function Contact() {
 				<div className='contact-infos'>
 					<div className='contact-textgroup'>
 						<h3>Mande-nos uma mensagem!</h3>
-						<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque, suscipit.</p>
+						<p>Queremos ouvir você! Entre em contato para nos conhecer e tirar suas dúvidas conosco, juntos moldaremos o futuro!</p>
 					</div>
 					<form onSubmit={(e) => handleSubmit(e)} className='contact-form'>
+						{showAlert && <Alert ref={alert} className="alert" variant="filled" severity="success">Mensagem enviada com sucesso!</Alert>}
 						<div className='contact-input-container'>
 							<label className='contact-label'>Nome</label>
 							<input className={`contact-input ${errors.name && 'invalid'}`} required onChange={(event) => setName(event.target.value)} name='name' onBlur={(e) => updatePropError(e.target.name, ValidationForm(e.target))} value={name} type="text" placeholder="Insira seu nome" />
