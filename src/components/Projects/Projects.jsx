@@ -1,7 +1,7 @@
 import './Projects.css';
 import { useState } from "react";
 import flexcube from '../../assets/flexcube.png';
-// import ecotable from '../../assets/ecotable.png';
+import ecotable from '../../assets/ecotable.png';
 // import compactMod from '../../assets/compact-mod.png'
 
 export default function Projects() {
@@ -18,7 +18,8 @@ export default function Projects() {
     {
       name: 'Ecotable',
       resume: 'Do minimalismo à funcionalidade máxima em segundos',
-      description: 'Com a nossa inovadora Ecotable, você está prestes a experimentar uma revolução no aproveitamento de espaço e design funcional. Esta peça versátil transcende os limites tradicionais do mobiliário, transformando-se de uma mesa de centro elegantemente desenhada em uma estante espaçosa, tudo em um piscar de olhos. Agora você pode maximizar a utilidade de cada centímetro do seu espaço, sem precisar sacrificar o estilo que valoriza.'
+      description: 'Com a nossa inovadora Ecotable, você está prestes a experimentar uma revolução no aproveitamento de espaço e design funcional. Esta peça versátil transcende os limites tradicionais do mobiliário, transformando-se de uma mesa de centro elegantemente desenhada em uma estante espaçosa, tudo em um piscar de olhos. Agora você pode maximizar a utilidade de cada centímetro do seu espaço, sem precisar sacrificar o estilo que valoriza.',
+      img: ecotable
     },
     {
       name: 'Compact Mod',

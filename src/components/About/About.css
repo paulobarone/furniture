@@ -8,11 +8,15 @@
 }
 
 .about-textgroup {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  place-items: center;
   gap: 16px;
-  max-width: 600px;
+}
+
+.about-textgroup h2 {
+  font-size: 32px;
+  font-weight: 700;
 }
 
 .about-textgroup p {
@@ -21,8 +25,43 @@
 
 .about-list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1frm);
   gap: 32px;
+  width: 100%;
+}
+
+.about-resume {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+}
+
+.icon-arrow {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.icon-arrow {
+  transition: transform 0.75s ease-in-out;
+}
+
+.active .icon-arrow {
+  transform: rotate(180deg);
+}
+
+.about-item-description {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.75s ease-in-out;
+}
+
+.active .about-item-description {
+  max-height: 999px;
 }
 
 .about-item {
@@ -30,7 +69,12 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 8px;
+  text-align: center;
+  padding: 24px;
+  background-color: var(--green);
+  border-radius: 16px;
+  gap: 16px;
+  position: relative;
 }
 
 .about-item:hover {
@@ -39,5 +83,36 @@
 }
 
 .about-item span {
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+@media screen and (min-width: 768px) {
+  .about-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-item-description {
+    max-height: 999px;
+  }
+
+  .icon-arrow {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .about-textgroup {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-item {
+    padding: 32px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .about-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }

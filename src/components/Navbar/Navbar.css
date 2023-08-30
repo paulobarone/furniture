@@ -63,6 +63,7 @@ nav h1 span {
   display: block;
   opacity: 0;
   transition: 0.5s;
+  animation: navLinkFade 1s;
 }
 
 .overlay {
@@ -143,5 +144,16 @@ nav h1 span {
 @media screen and (min-width: 1280px) {
   nav {
     padding: 16px 12%;
+  }
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
