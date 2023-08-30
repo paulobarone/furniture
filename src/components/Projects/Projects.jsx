@@ -2,7 +2,7 @@ import './Projects.css';
 import { useState } from "react";
 import flexcube from '../../assets/flexcube.png';
 import ecotable from '../../assets/ecotable.png';
-// import compactMod from '../../assets/compact-mod.png'
+import compactMod from '../../assets/compact-mod.png'
 
 export default function Projects() {
   const [project, setProject] = useState(0);
@@ -24,7 +24,8 @@ export default function Projects() {
     {
       name: 'Compact Mod',
       resume: 'Crie, Aprenda e Brinque com Praticidade e Estilo',
-      description: 'Com a nossa mesa modulável, você está prestes a descobrir uma abordagem completamente nova para a organização e a diversão em seus espaços. Essa peça versátil é mais do que apenas um móvel - é uma solução inteligente e prática que não apenas mantém seus itens arrumados e acessíveis, mas também incentiva a expressão criativa em todos os momentos. Seja em um espaço de trabalho ou na área de estudos das crianças, essa mesa é o catalisador para um ambiente onde a organização e a criatividade coexistem de maneira harmoniosa.'
+      description: 'Com a nossa mesa modulável, você está prestes a descobrir uma abordagem completamente nova para a organização e a diversão em seus espaços. Essa peça versátil é mais do que apenas um móvel - é uma solução inteligente e prática que não apenas mantém seus itens arrumados e acessíveis, mas também incentiva a expressão criativa em todos os momentos. Seja em um espaço de trabalho ou na área de estudos das crianças, essa mesa é o catalisador para um ambiente onde a organização e a criatividade coexistem de maneira harmoniosa.',
+      img: compactMod
     }
   ]
 

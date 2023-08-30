@@ -1,6 +1,7 @@
 import "./Showcase.css";
 import showcaseImg from '../../assets/showcase.png';
 import Button from "../Button/Button";
+import Redirect from "../Redirect/Redirect";
 
 
 export default function Showcase() {
@@ -14,7 +15,7 @@ export default function Showcase() {
         <p className="description">
         A EcoMod cria móveis sustentáveis e inovadores, representando nossa crença na harmonia entre humanos e natureza.
         </p>
-        <Button arrow={true}>Entre em contato</Button>
+        <Redirect href={'#contact'} arrow={true}>Entre em contato</Redirect>
       </div>
       <img className="showcase-img" src={showcaseImg} alt='Imagem ilustrativa de móveis naturais' />
     </section>
