@@ -45,18 +45,18 @@ export default function Contact() {
 					<form onSubmit={(e) => handleSubmit(e)} className='contact-form'>
 						{showAlert && <Alert ref={alert} className="alert" variant="filled" severity="success">Mensagem enviada com sucesso!</Alert>}
 						<div className='contact-input-container'>
-							<label className='contact-label'>Nome</label>
-							<input className={`contact-input ${errors.name && 'invalid'}`} required onChange={(event) => setName(event.target.value)} name='name' onBlur={(e) => updatePropError(e.target.name, ValidationForm(e.target))} value={name} type="text" placeholder="Insira seu nome" />
+							<label className='contact-label' htmlFor='name'>Nome</label>
+							<input className={`contact-input ${errors.name && 'invalid'}`} id='name' required onChange={(event) => setName(event.target.value)} name='name' onBlur={(e) => updatePropError(e.target.name, ValidationForm(e.target))} value={name} type="text" placeholder="Insira seu nome" />
 							{ errors.name && <span className='error-message'>{errors.name}</span> }
 						</div>
 						<div className='contact-input-container'>
-							<label className='contact-label'>E-mail</label>
-							<input className={`contact-input ${errors.email && 'invalid'}`} required onChange={(event) => setEmail(event.target.value)} name='email' onBlur={(e) => updatePropError(e.target.name, ValidationForm(e.target))} value={email} type="email" placeholder="Insira seu e-mail" />
+							<label className='contact-label' htmlFor='email'>E-mail</label>
+							<input className={`contact-input ${errors.email && 'invalid'}`} id='email' required onChange={(event) => setEmail(event.target.value)} name='email' onBlur={(e) => updatePropError(e.target.name, ValidationForm(e.target))} value={email} type="email" placeholder="Insira seu e-mail" />
 							{ errors.email && <span className='error-message'>{errors.email}</span> }
 						</div>
 						<div className='contact-input-container'>
-							<label className='contact-label'>Mensagem</label>
-							<span ref={messageInput} name="message" className={`span-textarea contact-input`} role="textbox" contentEditable></span>
+							<label className='contact-label' htmlFor='msg'>Mensagem</label>
+							<span ref={messageInput} name="message" className={`span-textarea contact-input`} id='msg' role="textbox" contentEditable></span>
 						</div>
 						<Button>Enviar</Button>
 					</form>
